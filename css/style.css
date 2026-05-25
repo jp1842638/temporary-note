@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -96,6 +97,8 @@ main {
 
 .editor {
   flex: 1;
+  min-width: 0;
+  max-width: 100%;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -103,8 +106,10 @@ main {
   min-height: 60vh;
   outline: none;
   box-shadow: var(--shadow);
-  overflow-wrap: break-word;
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
   font-size: 16px;
   line-height: 1.7;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
